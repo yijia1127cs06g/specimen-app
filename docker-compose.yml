@@ -1,0 +1,27 @@
+version: "3.6"
+services:
+
+  specimen:
+    image: specimen
+
+    container_name: specimen-api-server
+
+    build: .
+
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+    volumes:
+      - .:/app/
+
+    networks:
+      - specimen-app-public
+
+    env_file:
+      - .env
+
+    ports:
+      - "8000:8000"
+
+networks:
+  specimen-app-public:
+    driver: bridge

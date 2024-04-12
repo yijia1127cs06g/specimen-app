@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "specimen-app"
+version = "0.1.0"
+description = ""
+authors = ["yijia1127.cs06g@nctu.edu.tw"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.12.1"
+poetry = "^1.8.2"
+fastapi = "^0.110.1"
+uvicorn = {extras = ["standard"], version = "^0.29.0"}
+pydantic-settings = "^2.2.1"
+sqlmodel = "^0.0.16"
+aiosqlite = "^0.20.0"
+reportlab = "^4.1.0"
+bs4 = "^0.0.2"
+aiohttp = "^3.9.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,19 @@
+.vscode
+*.db
+.coverage
+.pytest_cache
+.DS_Store
+*.egg-info/
+*.swp
+*.sqlite3
+__pycache__
+.cache/
+.projectile
+charts/
+node_modules
+
+# pyenv
+.python-version
+
+venv
+.idea
