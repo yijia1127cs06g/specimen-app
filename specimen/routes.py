@@ -2,7 +2,7 @@ from http import HTTPStatus
 import io
 from typing import List, Any
 
-from fastapi import APIRouter, Depends, Response, BackgroundTasks
+from fastapi import APIRouter, BackgroundTasks, Depends, Query, Response
 from sqlmodel.ext.asyncio.session import AsyncSession
 
 from db.main import get_db_async_session
@@ -15,9 +15,11 @@ specimen_router = APIRouter(prefix='/specimens')
 
 @specimen_router.get('/', status_code=HTTPStatus.OK, response_model=List[SpecimenPublic])
 async def get_specimens(
-    session: AsyncSession = Depends(get_db_async_session)
+    session: AsyncSession = Depends(get_db_async_session),
+    offset: int = 0,
+    limit: int = Query(default=20, le=100)
 ) -> Any:
-    specimens = await SpecimenDal(session).all()
+    specimens = await SpecimenDal(session).all(offset=offset, limit=limit)
 
     return specimens
 

@@ -43,14 +43,18 @@ class SpecimenDal:
 
         return new_specimen
 
-    async def all(self):
+    async def all(self, offset: int = 0, limit: int = 20):
         """
         Get the list of all specimens.
+
+        Params:
+            offset (int): the offset.
+            limit (int): the limit.
 
         Returns:
             list: list of specimen object.
         """
-        statement = select(Specimen).order_by(Specimen.id)
+        statement = select(Specimen).order_by(Specimen.id).offset(offset).limit(limit)
 
         result = await self.session.exec(statement)
 
