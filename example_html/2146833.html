@@ -1,0 +1,399 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-TW">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140379090-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-140379090-1');
+    </script>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>青脆枝 | 中央研究院數位典藏</title>	
+	<meta name="keywords" content="中央研究院數位典藏,中研院數位典藏,中央研究院,中研院,數位典藏,數典,典藏,數位文化中心,青脆枝,藏品目錄,">
+    <meta name="description" content="青脆枝">
+    <!-- Open Graph -->
+    <meta property="og:title" content="青脆枝 | 中央研究院數位典藏" />
+    <meta property="og:url" content="https://sinica.digitalarchives.tw/collection_2146833.html" />
+    <meta property="og:description" content="青脆枝" />
+    <meta property="og:image" content="http://image.digitalarchives.tw/ImageCache/00/5b/43/e8.jpg" />
+	<meta property="og:type" content="article" />
+	<meta property="fb:app_id" content="273240709546983" />
+	<meta property="og:locale" content="zh_TW" />
+	<meta property="og:site_name" content="中央研究院數位典藏" />
+	<meta property="og:image:width" content="400"/><meta property="og:image:height" content="600"/>	
+	<meta name="distribution" content="Taiwan"/>
+	<meta name="distribution" content="global"/>
+	<meta name="rating" content="general"/>
+	<meta name="robots" content="all"/>
+    <!-- Style -->
+    <link rel="stylesheet" href="lib/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="lib/flickity/flickity.css" />
+    <link rel="stylesheet" href="lib/lightGallery/dist/css/lightgallery.min.css" />
+    <link rel="stylesheet" href="lib/tooltipster/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" href="lib/tooltipster/css/themes/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" href="lib/jssocials/jssocials.css" />
+    <link rel="stylesheet" href="lib/jssocials/jssocials-theme-minima.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/page.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon" />
+    <!-- Javascript -->
+    <script src="js/combine.js"></script>
+    <script src="js/script.js?t=1712833011"></script>
+    <script src="js/vue.js"></script>
+    <SCRIPT src="//char.iis.sinica.edu.tw/API/ics.js"></SCRIPT>
+    <script>
+        var data = {
+            tab: '',
+            nowpage:1,            count:0,            type:0,                                                                                                                                                                                                        };
+    </script>
+</head><style>
+.image-viewer .pager img.w{
+    height: auto;
+    width: 59px;
+}
+.image-viewer .pager img.h{
+    height: 60px;
+    width: auto;
+}
+.fullscreen .pager .cell{
+    border: 2px solid #666;
+}
+.fullscreen .pager .cell.current{
+    border: 2px solid #bbb;
+}
+
+</style>
+<!--NOTE: body、導覽列、語言列、搜尋列、頁尾、手機版導覽列等設定請見 index.html -->
+<body id="collection-read">
+    <!--Container-->
+    <div id="container">
+        
+<!--Header-->
+<!--NOTE: 各頁面 Header 內容均相同，可獨立出來便於管理-->
+<header id="header-wrapper" class="wrapper">
+    <div id="header-inner" class="inner">
+        <h1><a href="index.php">中研院數位典藏</a></h1>
+        <div class="search-button"><i class="far fa-search"></i></div>
+        <!--<div class="language-button">Language</div>-->
+        <div class="menu-button"></div>
+        <div id="nav-indicator"></div>
+    </div>
+</header>
+<!--Header-->
+<!--Navigator-->
+<!--NOTE: 各頁面 Navigator 內容均相同，可獨立出來便於管理-->
+<div id="nav-bg"></div>
+<nav id="nav-wrapper" class="wrapper">
+    <div id="nav-inner" class="inner">
+        <ul class="top-nav">
+            <li><a href="collection.php" data-target="collections" :class="tab == '藏品目錄' ? 'active' : ''">藏品目錄</a></li>
+            <li><a href="subject.php" data-target="articles" :class="tab == '文章選粹' ? 'active' : ''">文章選粹</a></li>
+            <li><a href="site.php" data-target="websites" :class="tab == '成果網站' ? 'active' : ''">成果網站</a></li>
+            <!--<li><a href="#" target="_blank" :class="tab == '創意應用' ? 'active' : ''">創意應用</a></li>-->
+        </ul>
+        <div class="nav-section" id="nav-collections">
+            <div class="set col-2">
+                <div class="nav-title">內容主題</div>
+                <ul><!--NOTE: 直接輸出全部分類項目，前端程式預設將會顯示前20項，點選展開按鈕後才顯示其餘分類項目-->
+<li><a href="collection.php?type=3664">人類學主題</a></li><li><a href="collection.php?type=3671">生物主題</a></li><li><a href="collection.php?type=3672">地圖與遙測主題</a></li><li><a href="collection.php?type=3666">考古主題</a></li><li><a href="collection.php?type=3667">拓片主題</a></li><li><a href="collection.php?type=3668">善本古籍主題</a></li><li><a href="collection.php?type=3663">新聞主題</a></li><li><a href="collection.php?type=3669">漢籍全文主題</a></li><li><a href="collection.php?type=3665">語言主題</a></li><li><a href="collection.php?type=3670">檔案主題</a></li>                </ul>
+            </div>
+            <div class="set col-2">
+                <div class="nav-title">典藏單位</div>
+                <ul><!--NOTE: 直接輸出全部分類項目，前端程式預設將會顯示前20項，點選展開按鈕後才顯示其餘分類項目-->
+<li><a href="collection.php?type=3794">歷史語言研究所</a></li><li><a href="collection.php?type=3788">民族學研究所</a></li><li><a href="collection.php?type=3789">近代史研究所</a></li><li><a href="collection.php?type=3793">臺灣史研究所</a></li><li><a href="collection.php?type=3792">語言學研究所</a></li><li><a href="collection.php?type=3786">人文社會科學研究中心</a></li><li><a href="collection.php?type=3787">生物多樣性研究中心</a></li><li><a href="collection.php?type=3791">資訊科學研究所</a></li><li><a href="collection.php?type=3790">計算中心（現資訊服務處）</a></li>                </ul>
+            </div>            
+            <div class="more">顯示所有內容主題<i class="fal fa-angle-down"></i></div>
+            <div class="less">顯示較少項目<i class="fal fa-angle-up"></i></div>
+        </div>
+        <div class="nav-section" id="nav-articles">
+            <div class="set col-2">
+                <div class="nav-title">文章類別</div>
+                <ul><!--NOTE: 直接輸出全部分類項目，前端程式預設將會顯示前10項，點選展開按鈕後才顯示其餘分類項目-->
+<li><a href="subject.php?type=3647">生活與文化</a></li><li><a href="subject.php?type=3648">地方與產業</a></li><li><a href="subject.php?type=3649">自然與生物</a></li><li><a href="subject.php?type=3654">休閒與運動</a></li><li><a href="subject.php?type=3655">建築與藝術</a></li><li><a href="subject.php?type=3650">原住民族</a></li><li><a href="subject.php?type=3651">數位技術</a></li><li><a href="subject.php?type=3652">器物與考古</a></li><li><a href="subject.php?type=3656">歷史與人物</a></li><li><a href="subject.php?type=3653">檔案與文獻</a></li><li><a href="subject.php?type=3646">文學創作</a></li>                </ul>
+            </div>
+            <div class="set col-2">
+                <div class="nav-title">主題專欄</div>
+                <ul><!--NOTE: 直接輸出全部分類項目，前端程式預設將會顯示前10項，點選展開按鈕後才顯示其餘分類項目-->
+<li><a href="subject.php?cat=3658">CCC創作集</a></li><li><a href="subject.php?cat=3659">貝類與人文多樣性系列</a></li><li><a href="subject.php?cat=3660">流轉年華—臺灣女性檔案百年特展</a></li><li><a href="subject.php?cat=3661">數位典藏照片詩文徵選</a></li>                </ul>
+            </div>
+            <div class="more">顯示所有分類與主題<i class="fal fa-angle-down"></i></div>
+            <div class="less">顯示較少項目<i class="fal fa-angle-up"></i></div>
+        </div>
+        <div class="nav-section" id="nav-websites">
+            <div class="set col-2">
+                <div class="nav-title">機構</div>
+                <ul><!--NOTE: 直接輸出全部分類項目，前端程式預設將會顯示前10項，點選展開按鈕後才顯示其餘分類項目-->
+<li><a href="site.php?org=3765">歷史語言研究所</a></li><li><a href="site.php?org=3766">民族學研究所</a></li><li><a href="site.php?org=3767">近代史研究所</a></li><li><a href="site.php?org=3771">臺灣史研究所</a></li><li><a href="site.php?org=3772">社會學研究所</a></li><li><a href="site.php?org=3773">語言學研究所</a></li><li><a href="site.php?org=3776">人文社會科學研究中心</a></li><li><a href="site.php?org=3764">生物多樣性研究中心</a></li><li><a href="site.php?org=3747">物理研究所</a></li><li><a href="site.php?org=3750">資訊科學研究所</a></li><li><a href="site.php?org=3756">資訊科技創新研究中心</a></li><li><a href="site.php?org=3777">數位文化中心</a></li><li><a href="site.php?org=3751">統計科學研究所</a></li><li><a href="site.php?org=3783">計算中心（現資訊服務處）</a></li>                    
+                </ul>
+            </div>
+            <div class="set col-2">
+                <div class="nav-title">主題</div>
+                <ul><!--NOTE: 直接輸出全部分類項目，前端程式預設將會顯示前10項，點選展開按鈕後才顯示其餘分類項目-->
+<li><a href="site.php?type=3729">人類學</a></li><li><a href="site.php?type=3730">文字學</a></li><li><a href="site.php?type=3728">考古學</a></li><li><a href="site.php?type=3734">地圖與GIS</a></li><li><a href="site.php?type=3738">技術工具</a></li><li><a href="site.php?type=3726">動物</a></li><li><a href="site.php?type=3739">專題與加值應用</a></li><li><a href="site.php?type=3727">植物</a></li><li><a href="site.php?type=3737">資料庫</a></li><li><a href="site.php?type=3731">語言學</a></li><li><a href="site.php?type=3741">數位典藏與數位人文計畫</a></li><li><a href="site.php?type=3740">數位學習</a></li><li><a href="site.php?type=3735">影像、影音</a></li><li><a href="site.php?type=3736">整合性資源、入口網站</a></li><li><a href="site.php?type=3732">檔案、圖書、文獻</a></li><li><a href="site.php?type=3733">簡牘、拓片</a></li>    
+                </ul>
+            </div>
+            <div class="more">顯示所有機構與主題<i class="fal fa-angle-down"></i></div>
+            <div class="less">顯示較少項目<i class="fal fa-angle-up"></i></div>
+        </div>
+    </div>
+</nav>
+<!--Navigator-->
+<!--Language-->
+<!--
+<div id="language-wrapper" class="wrapper">
+    <div id="language-inner" class="inner">
+        <ul>
+            <li><a href="#">中文</a></li>
+            <li><a href="#">English</a></li>
+        </ul>
+    </div>
+</div>
+-->
+<!--Language-->
+<!--Search-->
+<div id="search-wrapper" class="wrapper">
+    <div id="search-inner" class="inner">
+        <form id="nav-search-form" method="get" action="search.php">
+            <input type="text" name="q" placeholder="關鍵字" autocomplete="off" id="nav-search-term" />
+            <input type="submit" value="全站搜尋" />
+        </form>
+        <a href="search_advanced.php">進階搜尋</a>
+        <!--<a href="#" class="search-gis">藏品GIS檢索</a>-->
+    </div>
+</div>
+<!--Search-->
+<!--Breadcrumb-->
+<div id="breadcrumb-wrapper">
+    <div id="breadcrumb-inner" class="inner">
+        <a href="index.php">首頁</a>
+        <span class="seperater"><i class="fal fa-angle-right"></i></span>
+<a href="collection.php" id="page-title">藏品目錄</a><span class="seperater"><i class="fal fa-angle-right"></i></span><a href="">青脆枝</a>        
+        
+    </div>
+</div>
+<!--Breadcrumb-->
+        <!--Main-->
+        <main id="main">
+            <div id="main-inner" class="inner border-rt">
+                <!--Content-->
+                <div id="main-content">
+                    <div id="main-content-inner">
+                        <!--Article-->
+                        <article class="main-article">
+                            <h1 id="collection-title"><dd>中文種名:青脆枝</dd><dd>學名:Nothapodytes foetida (Wight) Sleum.</dd></h1>
+                            <!--Image Viewer-->
+                            
+                            <div class="image-viewer">
+                                <div class="title"><dd>中文種名:青脆枝</dd><dd>學名:Nothapodytes foetida (Wight) Sleum.</dd></div>
+                                    <!--NOTE: 
+                                    點選圖片時可進一步放大檢視，因此建議採用較大尺寸圖片。
+                                    若 img 有設定 alt 屬性，放大檢視時會於圖片上方顯示說明文字。
+                                    -->
+                                <div class="viewer">
+<div class="cell"><img src="http://image.digitalarchives.tw/ImageCache/00/5b/43/e8.jpg" alt="中文種名:青脆枝" /></div>                                </div>
+                                <div class="pager" style="height: 72px; overflow-y: auto;">
+<div class="cell" style="line-height: 88.5px;padding-left:0.5px;padding-top:0.5px"><img src="http://image.digitalarchives.tw/Thumbnail/00/5b/43/e8.jpg" alt="中文種名:青脆枝" class="h" /></div>                                    <!--NOTE: 建議為正方形縮圖，但如果縮圖不是正方形仍可正常顯示-->
+                                    <!--                                    
+                                    <div class="cell"><img src="images/sample/collection-read-05.jpg" /></div>
+                                    <div class="cell"><img src="images/sample/collection-read-04.jpg" /></div>
+                                    <div class="cell"><img src="images/sample/collection-read-06.jpg" /></div>
+                                    -->
+                                </div>
+                                <div class="close"><i class="fal fa-times"></i></div>
+                            </div>
+                            
+                            <!--Image Viewer-->
+                            <!--Meta Data-->
+                            <dl class="meta-data">
+<dt>識別資訊</dt><dd>標本館號:24725</dd><dd>編目號:Chi-Cheng Liao 1140</dd><dt>主題與關鍵字</dt><dd>界:植物界</dd><dd>界（英文）:Plantae</dd><dd>門:種子植物門</dd><dd>門（英文）:Spermatophyta</dd><dd>綱:雙子葉植物綱</dd><dd>綱（英文）:Dicotyledons</dd><dd>目（英文）:unplaced taxa (Dicotyledons)</dd><dd>科:茶茱萸科</dd><dd>科（英文）:ICACINACEAE</dd><dd>屬:鷹紫花樹屬</dd><dd>屬（英文）:Nothapodytes</dd><dt>出版者</dt><dd>中央研究院生物多樣性研究中心</dd><dt>貢獻者</dt><dd>採集者:廖啟政</dd><dd>採集者（英文）:Chi-Cheng Liao</dd><dt>日期</dt><dd>採集日期:1993-02-24</dd><dt>來源</dt><dd>台灣本土植物資料庫（http://taiwanflora.sinica.edu.tw/）</dd><dt>語言</dt><dd>中文</dd><dt>範圍</dt><dd>緯度:22.020000</dd><dd>經度:121.580000</dd><dd>國家:台灣</dd><dd>行政區:台東縣蘭嶼鄉</dd><dd>最低海拔:0</dd><dd>最高海拔:50</dd><dt>管理權</dt><dd>中央研究院 生物多樣性研究中心 植物標本館 Herbarium, Research Center for Biodiversity, Academia Sinica, Taipei (HAST)</dd><dt>授權條款</dt><dd><img src="images/cc/cc.svg" class="cc-icon"><img src="images/cc/by.svg" class="cc-icon"><img src="images/cc/nc.svg" class="cc-icon"><img src="images/cc/nd.svg" class="cc-icon"></dd><dt>授權聯絡窗口</dt><dd>請洽請洽中央研究院生物多樣性研究中心<br>email：biodiv@gate.sinica.edu.tw</dd>                            <!--
+                                <dt>識別資訊</dt>
+                                <dd>登錄號：R001751</dd>
+                                <dt>資料類型</dt>
+                                <dd>考古遺物</dd>
+                                <dt>主題與關鍵字</dt>
+                                <dd>禮儀/宗教用具</dd>
+                                <dt>範圍</dt>
+                                <dd>西北岡墓1004</dd>
+                                <dt>描述</dt>
+                                <dd>形制：長方形，四足兩耳，唇緣外撇，器身四角及中間均有稜，底內外近平，四足圓柱形，中空，俯視成四洞，腹飾鹿獸面紋，其四周為夔紋，左右各一鳥紋，兩側面鹿紋左右只有鳥紋，空隙處填滿雷紋，四均為鹿獸面紋及三角紋。 Unearthed together with the Niu Fang-ting' this cauldron is similiar in type'but smaller in size.The main decoration on each of the four sides is a deer head with a standing bird on each side. A band of "Kuei-dragon" patterns appears on the upper and lower part of the vessel. The emblem cast on the inner bottom of the vessel is a pictographic character for deer. 材質：青銅</dd>
+                                <dt>格式</dt>
+                                <dd>高：完整；通耳 59.7 公分 高：完整、最大；全器 48.5 公分 高：完整、最小；全器 47.7 公分 長：完整；內口徑 46.2 公分 寬：完整；內口徑 32.1 公分 長：完整；外口徑 51.0 公分 寬：完整；外口徑 38.0 公分 重量：完整；全器 60.4 公斤 容積：完整；全器 35033.0 毫升</dd>
+                                <dt>日期</dt>
+                                <dd>文化年代：青銅時代 考古學文化：殷虛 歷史年代：商(後期)</dd>
+                                <dt>語言</dt>
+                                <dd>中文</dd>
+                                <dt>管理權</dt>
+                                <dd>中央研究院歷史語言研究所</dd>
+                                <dt>來源</dt>
+                                <dd>中央研究院數位典藏計畫 - 考古資料數位典藏系統</dd>
+                                <dt>授權條款</dt>
+                                <dd>
+                                    <img src="images/cc/cc.svg" class="cc-icon">
+                                    <img src="images/cc/by.svg" class="cc-icon">
+                                    <img src="images/cc/nc.svg" class="cc-icon">
+                                    <img src="images/cc/nd.svg" class="cc-icon">
+                                    <img src="images/cc/sa.svg" class="cc-icon">
+                                </dd>
+                                -->
+                                <!--NOTE: 各種 CC 授權圖示存放於 images/cc/資料夾 -->
+                            </dl>
+                            <!--Meta Data-->
+                        </article>
+                        <!--Article-->
+                    </div>
+                </div>
+                <!--Content-->
+                <!--Aside-->
+                <div id="main-aside">
+                    <div id="main-aside-inner">
+                        <div class="set share">
+                            <h3>分享本文</h3>
+                            <div class="sharer"></div>
+                        </div>
+<div class="set source"><h3>資源連結</h3><a href="http://www.hast.biodiv.tw/specimens/SpecimenDetailC.aspx?specimenOrderNum=24725" target="_blank" class="button">前往原始連結</a></div>                        
+                        <div class="set quote">
+                            <h3>引用</h3>
+                            <!-- <textarea id="quote-data">作者：<br />提供單位：中央研究院 數位典藏計畫<br />文章出處：中央研究，http://digiarch.sinica.edu.tw/content/repository/resource_content.jsp?oid=1844851</textarea> -->
+<textarea id="quote-data">作者不詳（1993-02-24）。[中文種名:青脆枝]。《中央研究院數位典藏》。https://sinica.digitalarchives.tw/collection_2146833.html（2024/04/11 瀏覽）。</textarea>                            <!--NOTE: 點擊按鈕時，前端程式會自動將 textarea 當中的內容複製到剪貼簿 -->
+                            <a class="button copy-button" data-clipboard-target="#quote-data" title="Copied!">複製引用資訊</a>
+                        </div>
+                    </div>
+                </div>
+                <!--Aside-->
+            </div>
+        </main>
+        <!--Main-->
+        <!--Related List-->
+        <!--NOTE: 建議至多顯示10個相關項目 -->
+        <div class="related-list">
+            <div class="inner">
+                <h2>相關推薦藏品</h2>
+                <div class="carousel left" id="crelated">
+                <!--
+                    <div class="cell thumb-box-wrapper">
+                        <div class="thumb-box"><img src="images/sample/collection-read-07.jpg" /></div>
+                        <div class="title"><a href="collection_read.html">牛方鼎</a></div>
+                    </div>
+                    <div class="cell thumb-box-wrapper">
+                        <div class="thumb-box"><img src="images/sample/collection-read-08.jpg" /></div>
+                        <div class="title"><a href="collection_read.html">我方鼎</a></div>
+                    </div>
+                    <div class="cell thumb-box-wrapper">
+                        <div class="thumb-box"><img src="images/sample/collection-read-07.jpg" /></div>
+                        <div class="title"><a href="collection_read.html">牛方鼎</a></div>
+                    </div>
+                    <div class="cell thumb-box-wrapper">
+                        <div class="thumb-box"><img src="images/sample/collection-read-08.jpg" /></div>
+                        <div class="title"><a href="collection_read.html">我方鼎</a></div>
+                    </div>
+                    <div class="cell thumb-box-wrapper">
+                        <div class="thumb-box"><img src="images/sample/collection-read-07.jpg" /></div>
+                        <div class="title"><a href="collection_read.html">牛方鼎</a></div>
+                    </div>
+                    <div class="cell thumb-box-wrapper">
+                        <div class="thumb-box"><img src="images/sample/collection-read-08.jpg" /></div>
+                        <div class="title"><a href="collection_read.html">我方鼎</a></div>
+                    </div>
+                -->
+                </div>
+            </div>    
+        </div>
+        <!--Related List-->
+        <!--Footer-->
+<!--NOTE: 各頁面 Footer 內容均相同，可獨立出來便於管理-->
+<footer id="footer-wrapper" class="wrapper">
+    <div id="footer-inner" class="inner">
+        <ul id="footer-nav">
+            <li><a href="about.php">關於本站</a></li>
+            <li><a href="terms.php">著作權聲明</a></li>
+        </ul>
+        <div id="footer-social"></div>
+    </div>
+</footer>
+<!--Footer-->
+<!--Copyright-->
+<!--NOTE: 各頁面 Copyright 內容均相同，可獨立出來便於管理-->
+<div id="copyright-wrapper" class="wrapper">
+    <div id="copyright-inner" class="inner">
+        <div class="sinica"><a href="https://www.sinica.edu.tw" target="_blank">中央研究院  Academia Sinica</a></div>
+        <div class="digital-center">&copy; 2018 <a href="http://ascdc.sinica.edu.tw/" target="_blank">數位文化中心</a></div>
+        <div class="designer"><a href="http://dozencreation.com" target="_blank">Design by DozenCreation</a></div>
+    </div>
+</div>
+<!--Copyright-->    </div>
+    <!--Container-->
+<!-- Mobile Navigator -->
+<div id="mobile-nav-wrapper" class="wrapper mobile-element">
+    <div id="mobile-nav-inner" class="inner">
+        <ul>
+            <li><a href="collection.php">典藏目錄</a></li>
+            <li><a href="subject.php">文章選粹</a></li>
+            <li><a href="site.php">成果網站</a></li>
+        </ul>
+        <ul>
+            <li><a href="about.php">關於本站</a></li>
+            <li><a href="terms.php">著作權聲明</a></li>
+        </ul>
+        <ul class="lang">
+            <li><a href="#">ENGLISH</a></li>
+            <li><a href="#">中文</a></li>
+        </ul>
+        <div class="close"><i class="fal fa-times"></i></div>
+    </div>
+</div>
+<!--Mobile Navigator-->
+<!--Mobile Search-->
+<div id="mobile-search-wrapper" class="wrapper mobile-element">
+    <div id="mobile-search-inner" class="inner">
+        <div class="title">全站搜尋</div>
+        <form method="get" action="search.php">
+            <input type="text" name="q" placeholder="關鍵字" autocomplete="off" />
+            <button type="submit"><i class="far fa-search"></i></button>
+        </form>
+        <div class="advanced">
+            <p><a href="search_advanced.php">進階搜尋</a></p>
+            <p><a href="#" class="search-gis">藏品GIS檢索</a></p>
+        </div>
+    </div>
+    <div class="close"><i class="fal fa-times"></i></div>
+</div>
+<!--Mobile Search-->
+<!--Back to Top-->
+<div id="back-to-top"><i class="fal fa-long-arrow-up"></i><span>TOP</span></div>
+<!--Back to Top-->
+</body>
+
+</html><script>
+    $(function(){
+        ajax.post(
+            '_partial/_collection_related_collection.php',
+            {},
+            function(resp){
+                let json = JSON.parse(resp);
+                let list = json.list;
+                let html = '';
+                list.forEach(function(item, index, array){
+                    html += '<div class="cell thumb-box-wrapper">';
+                    html += '<div class="thumb-box"><img src="' + item['icon'] + '" /></div>';
+                    html += '<div class="title"><a href="collection_' + item['id'] + '.html">' + item['title'] + '</a></div>';
+                    html += '</div>';
+                });
+                $('.carousel.left').flickity('destroy');
+                $('#crelated').html(html);           
+                carouselLeft();
+                processPage('black','12','','','');
+            }
+        );
+        processObject($('#collection-title'), 'black', '16', '', '', '');
+        processPage('black','12','','','');
+    });
+</script>
