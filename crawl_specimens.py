@@ -9,8 +9,8 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 
 from db.models import Specimen
-from specimen.crawl_utils import fetch_specimen_html_from_sinica, parse_specimen_from_sinica
-
+from specimen.crawl_utils import fetch_specimen_html_from_sinica, parse_specimen_from_sinica, \
+    parse_specimen_from_sinica_v2
 
 async_engine = create_async_engine(url=f'sqlite+aiosqlite:///{os.environ["DB_FILENAME"]}', echo=False)
 
@@ -55,8 +55,23 @@ async def crawl_specimens(specimen_sinica_id_split):
                 else:
                     with open(f'example_html/{specimen_sinica_id}.html') as f:
                         specimen_html = f.read()
-                specimen = parse_specimen_from_sinica(specimen_html)
-                await select_and_update_specimen(async_db_session, specimen)
+
+                # Try different parse function, since the format of specimen html is varied
+                parse_success = False
+                for parse_function in [parse_specimen_from_sinica, parse_specimen_from_sinica_v2]:
+                    try:
+                        specimen = parse_function(specimen_html)
+                    except:
+                        logging.warning(f'Failed to parse specimen: {specimen_sinica_id},'
+                                        f' using parse_function: {parse_function}')
+                        continue
+                    else:
+                        parse_success = True
+                        break
+
+                if parse_success:
+                    await select_and_update_specimen(async_db_session, specimen)
+
             except Exception as e:
                 logging.warning(f'[crawl_specimens] crawl specimen {specimen_sinica_id} occurs error: {e}')
                 continue
