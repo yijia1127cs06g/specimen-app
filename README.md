@@ -19,7 +19,7 @@ $ docker-compose -f docker-compose.yml up
 ```
 3. Load specimen fixture
 ```sh
-$ docker exec specimen-api-server python load_specimen_fixtures.py
+$ docker exec specimen-api-server python load_initial_fixtures.py
 ```
 
 ## 2. Usage
